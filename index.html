@@ -47,7 +47,7 @@
             margin-top: 20px;
         }
 
-        .button-buy {
+        .button-contract {
             position: absolute;
             bottom: 20px;
             left: 20px;
@@ -56,9 +56,9 @@
             color: white;
             border: none;
             border-radius: 5px;
-            text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .social-icons {
@@ -71,6 +71,38 @@
             width: 40px;
             margin-left: 10px;
         }
+
+        .slide {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+        }
+
+        #dexscreener-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 125%;
+        }
+
+        @media (min-width: 1400px) {
+            #dexscreener-embed {
+                padding-bottom: 65%;
+            }
+        }
+
+        #dexscreener-embed iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -82,19 +114,44 @@
     </video>
 
     <!-- Content overlay -->
-    <div class="content">
+    <div class="content" id="content1">
         <h1>Look above, $MOOTEOR's coming.</h1>
         <img src="path-to-your-character-image.png" alt="Character" class="image-character">
+        <button class="button-contract" onclick="copyContract()">Contract</button>
     </div>
 
-    <!-- Button and social icons -->
-    <a href="#" class="button-buy">BUY HERE!</a>
-
+    <!-- Social icons -->
     <div class="social-icons">
         <a href="@mooteorsolcto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png" alt="Telegram"></a>
         <a href="https://x.com/moonteorcto"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg" alt="X (Twitter)"></a>
         <a href="https://dexscreener.com/solana/96uab5dlkf9f6fwvtnm12g8myzzcogdqib9o5pjoohrf"><img src="https://play-lh.googleusercontent.com/Yk8oT4lKwRdgBzs_SZ0s02vjjwAUMz_8lyKfTGqk0vRZjauY90IzXzg592FDWaNK7Q=w240-h480-rw" alt="DEX"></a>
     </div>
+
+    <!-- Second slide with DexScreener -->
+    <div class="slide" id="slide2">
+        <div id="dexscreener-embed">
+            <iframe src="https://dexscreener.com/solana/96UaB5dLKf9f6fWVTnM12g8myzZCogdQib9o5PJoohRF?embed=1&theme=dark"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Function to copy the contract address to clipboard
+        function copyContract() {
+            const contract = "9G9Rtb3aHWyxgjvgcvuUazJMK6Yiz3J732GJnAywpump";
+            navigator.clipboard.writeText(contract).then(() => {
+                alert("Contract copied to clipboard: " + contract);
+            });
+        }
+
+        // Function to switch to the second slide
+        function goToSlide2() {
+            document.getElementById('content1').style.display = 'none';
+            document.getElementById('slide2').style.display = 'flex';
+        }
+
+        // Automatically go to second slide after a delay (optional)
+        setTimeout(goToSlide2, 10000); // Switch to second slide after 10 seconds
+    </script>
 
 </body>
 </html>
