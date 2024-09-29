@@ -6,76 +6,77 @@
     <title>$MOOTEOR - Solana Token</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #d0342c;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
-        header {
-            background-color: #0077b6;
-            padding: 20px;
+
+        .container {
             text-align: center;
-            color: white;
+            position: relative;
         }
-        header h1 {
+
+        h1 {
+            font-size: 64px;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
             margin: 0;
         }
-        section {
-            padding: 40px;
-            text-align: center;
+
+        .image-character {
+            width: 250px;
+            margin-top: 20px;
         }
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .button {
-            background-color: #0077b6;
+
+        .button-buy {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px 30px;
+            background-color: #f95738;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to $MOOTEOR</h1>
-        <p>The Future of Decentralized Finance on Solana</p>
-    </header>
 
-    <section>
-        <h2>About $MOOTEOR</h2>
-        <p>
-            $MOOTEOR is a next-generation token on the Solana blockchain, designed to fuel innovation in decentralized finance. 
-            Fast, secure, and scalable, $MOOTEOR aims to empower users with seamless transactions and the best DeFi experience.
-        </p>
-        <a href="#" class="button">Buy $MOOTEOR Now</a>
-    </section>
+    <div class="container">
+        <h1>Click to Pop!</h1>
+        <img src="path-to-your-character-image.png" alt="Character" class="image-character">
+        <!-- Le chemin de l'image doit être modifié pour correspondre à l'emplacement de ton image -->
+    </div>
 
-    <section>
-        <h2>Why Choose $MOOTEOR?</h2>
-        <p>
-            - Lightning-fast transactions on the Solana network.<br>
-            - Low fees that maximize your returns.<br>
-            - Secure and transparent with blockchain technology.<br>
-            - Backed by a growing community of users and developers.
-        </p>
-    </section>
+    <a href="#" class="button-buy">BUY HERE!</a>
 
-    <footer>
-        <p>© 2024 $MOOTEOR - Powered by Solana Blockchain</p>
-    </footer>
+    <div class="social-icons">
+        <a href="#"><img src="path-to-telegram-icon.png" alt="Telegram"></a>
+        <a href="#"><img src="path-to-x-icon.png" alt="X (Twitter)"></a>
+        <a href="#"><img src="path-to-other-icon.png" alt="Other"></a>
+    </div>
+
 </body>
 </html>
