@@ -5,27 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$MOOTEOR - Solana Token</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #101732;
-            font-family: 'Arial', sans-serif;
+            height: 100%;
             overflow: hidden;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            font-family: Arial, sans-serif;
         }
 
-        .container {
-            text-align: center;
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
             position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
 
         h1 {
             font-size: 64px;
-            color: #333;
             text-transform: uppercase;
             font-weight: bold;
             margin: 0;
@@ -41,7 +52,7 @@
             bottom: 20px;
             left: 20px;
             padding: 15px 30px;
-            background-color: #f95738;
+            background-color: rgba(249, 87, 56, 0.8);
             color: white;
             border: none;
             border-radius: 5px;
@@ -64,18 +75,25 @@
 </head>
 <body>
 
-    <div class="container">
+    <!-- Background video -->
+    <video autoplay muted loop class="video-background">
+        <source src="IMG_5734.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content overlay -->
+    <div class="content">
         <h1>Click to Pop!</h1>
         <img src="path-to-your-character-image.png" alt="Character" class="image-character">
-        <!-- Le chemin de l'image doit être modifié pour correspondre à l'emplacement de ton image -->
     </div>
 
+    <!-- Button and social icons -->
     <a href="#" class="button-buy">BUY HERE!</a>
 
     <div class="social-icons">
-        <a href="@mooteorsolcto"><img src="path-to-telegram-icon.png" alt="Telegram"></a>
-        <a href="https://x.com/moonteorcto"><img src="path-to-x-icon.png" alt="X (Twitter)"></a>
-        <a href="https://dexscreener.com/solana/96uab5dlkf9f6fwvtnm12g8myzzcogdqib9o5pjoohrf"><img src="path-to-other-icon.png" alt="Dex"></a>
+        <a href="#"><img src="path-to-telegram-icon.png" alt="Telegram"></a>
+        <a href="#"><img src="path-to-x-icon.png" alt="X (Twitter)"></a>
+        <a href="#"><img src="path-to-other-icon.png" alt="Other"></a>
     </div>
 
 </body>
